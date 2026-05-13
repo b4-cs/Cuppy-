@@ -12,7 +12,7 @@ export const botConfig = {
   // - "invisible" = appears offline
   presence: {
     // Current online state shown on Discord.
-    status: "online",
+    status: "idle",
 
     // Activity lines shown under the bot name.
     // `type` number mapping from Discord:
@@ -25,9 +25,9 @@ export const botConfig = {
     activities: [
       {
         // Text users will see (example: "Playing /help | Titan Bot").
-        name: "Made with ❤️",
+        name: "Toby's streams ❤️",
         // Activity type number (0 = Playing).
-        type: 0, 
+        type: 3, 
       },
     ],
   },
@@ -156,9 +156,9 @@ export const botConfig = {
   economy: {
     currency: {
       // Currency display name.
-      name: "coins",
+      name: "Tobycoin",
       // Plural display name.
-      namePlural: "coins",
+      namePlural: "Tobycoins",
       // Currency symbol shown in balances.
       symbol: "$",
     },
@@ -177,11 +177,11 @@ export const botConfig = {
     workMax: 100,
 
     // Beg command random payout range.
-    begMin: 5,
-    begMax: 50,
+    begMin: 0,
+    begMax: 5,
 
     // Chance to succeed when robbing (0.4 = 40%).
-    robSuccessRate: 0.4,
+    robSuccessRate: 0.2,
 
     // Jail time after failed rob (milliseconds).
     // 3600000 = 1 hour.
@@ -211,7 +211,7 @@ export const botConfig = {
       none: {
         emoji: "⚪",
         color: "#95A5A6",
-        label: "None",
+        label: "Opgelosd",
       },
       low: {
         emoji: "🟢",
@@ -231,7 +231,7 @@ export const botConfig = {
       urgent: {
         emoji: "🚨",
         color: "#E91E63",
-        label: "Urgent",
+        label: "Alles gaat kapot als dit niet gefixd is",
       },
     },
 
@@ -255,7 +255,7 @@ export const botConfig = {
 
     // Allowed winner count range.
     minimumWinners: 1,
-    maximumWinners: 10,
+    maximumWinners: 1,
 
     // Allowed giveaway duration range in milliseconds.
     // 300000 = 5 minutes.
@@ -264,10 +264,10 @@ export const botConfig = {
     maximumDuration: 2592000000, 
 
     // Role IDs allowed to host giveaways.
-    allowedRoles: [],
+    allowedRoles: [1052572254430560316, 1052568925226926120],
 
     // Role IDs that bypass giveaway restrictions.
-    bypassRoles: [],
+    bypassRoles: [1052572254430560316],
   },
 
   // =========================
@@ -289,7 +289,7 @@ export const botConfig = {
   // =========================
   verification: {
     // Message shown when posting the verification panel.
-    defaultMessage: "Click the button below to verify yourself and gain access to the server!",
+    defaultMessage: "Click op de knop om toegang te krijgen tot de server!",
 
     // Text on the verification button.
     defaultButtonText: "Verify",
@@ -312,7 +312,7 @@ export const botConfig = {
       // Allowed safety limits for account-age requirements.
       // 1 = minimum day, 365 = maximum days.
       minAccountAge: 1,      
-      maxAccountAge: 365,    
+      maxAccountAge: 36500,    
 
       // If true, user receives a DM after verification.
       sendDMNotification: true,
@@ -359,15 +359,15 @@ export const botConfig = {
     // Welcome template posted when a user joins.
     // Placeholders: {user}, {server}, {memberCount}
     defaultWelcomeMessage:
-      "Welcome {user} to {server}! We now have {memberCount} members!",
+      "Welcom {user} bij {server}! We hebben nu {memberCount} fans!",
     // Goodbye template posted when a user leaves.
     // Placeholders: {user}, {memberCount}
     defaultGoodbyeMessage:
-      "{user} has left the server. We now have {memberCount} members.",
+      "{user} is weg :sob: . We hebben nu  {memberCount} fans.",
     // Channel ID for welcome messages.
-    defaultWelcomeChannel: null,
+    defaultWelcomeChannel: 1064664465972400268,
     // Channel ID for goodbye messages.
-    defaultGoodbyeChannel: null,
+    defaultGoodbyeChannel: 1504224975324971180,
   },
 
   // =========================
@@ -421,13 +421,13 @@ export const botConfig = {
   // GENERIC BOT MESSAGES
   // =========================
   messages: {
-    noPermission: "You do not have permission to use this command.",
-    cooldownActive: "Please wait {time} before using this command again.",
-    errorOccurred: "An error occurred while executing this command.",
+    noPermission: "Sorry, deze actie is niet toegestaan met jouw rol.",
+    cooldownActive: "Probeer over  {time} opnieuw.",
+    errorOccurred: "Er is iet mis gegaan! Gebeurt dit te vaak, ping bob de bouwer.",
     missingPermissions:
-      "I am missing required permissions to perform this action.",
-    commandDisabled: "This command has been disabled.",
-    maintenanceMode: "The bot is currently in maintenance mode.",
+      "Ik mag dit niet doen!.",
+    commandDisabled: "Deze actie is uitgezet.",
+    maintenanceMode: "Ik ben in bouwmodus, ik doe het niet!",
   },
 
   // =========================
@@ -436,7 +436,7 @@ export const botConfig = {
   // Set any feature to `false` to disable it globally.
   features: {
     // Core systems.
-    economy: true,
+    economy: false,
     leveling: true,
     moderation: true,
     logging: true,
@@ -444,8 +444,8 @@ export const botConfig = {
 
     // Community engagement systems.
     tickets: true,
-    giveaways: true,
-    birthday: true,
+    giveaways: false,
+    birthday: false,
     counter: true,
 
     // Security and self-service systems.
