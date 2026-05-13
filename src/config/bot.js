@@ -12,7 +12,7 @@ export const botConfig = {
   // - "invisible" = appears offline
   presence: {
     // Current online state shown on Discord.
-    status: "idle",
+    status: "online",
 
     // Activity lines shown under the bot name.
     // `type` number mapping from Discord:
@@ -56,9 +56,9 @@ export const botConfig = {
   applications: {
     // Default questions shown when someone fills out an application.
     defaultQuestions: [
-      { question: "What is your name?", required: true },
-      { question: "How old are you?", required: true },
-      { question: "Why do you want to join?", required: true },
+      { question: "Hoe moeten we je noemen?", required: true },
+      { question: "Hoe oud ben je? Dit is noet opgeslagen maar moet boven 13 zijn I.V.M Discord TOS", required: true },
+      { question: "Waarom wil je joinen?", required: true },
     ],
 
     // Embed colors by application status.
@@ -437,7 +437,7 @@ export const botConfig = {
   features: {
     // Core systems.
     economy: false,
-    leveling: true,
+    leveling: false,
     moderation: true,
     logging: true,
     welcome: true,
@@ -459,7 +459,7 @@ export const botConfig = {
     tools: true,
     utility: true,
     community: true,
-    fun: true,
+    fun: false,
   },
 };
 
