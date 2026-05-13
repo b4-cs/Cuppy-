@@ -308,7 +308,7 @@ class TitanBot extends Client {
   }
 
   async shutdown(reason = 'UNKNOWN') {
-    shutdownLog(`Bot is shutting down (${reason})...`);
+    shutdownLog(`De Bot gaat ff uit (${reason})...`);
     logger.info(`\n${'='.repeat(60)}`);
     logger.info(`🛑 Graceful Shutdown Initiated (${reason})`);
     logger.info(`${'='.repeat(60)}`);
