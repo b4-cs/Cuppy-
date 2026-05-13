@@ -31,8 +31,8 @@ export default {
                 return await InteractionHelper.safeEditReply(interaction, {
                     embeds: [
                         errorEmbed(
-                            "Not a Ticket Channel",
-                            "This command can only be used in a valid ticket channel.",
+                            "Geen Ticket Channel",
+                            "Dit kan alleen in Tickets.",
                         ),
                     ],
                 });
@@ -42,8 +42,8 @@ export default {
                 return await InteractionHelper.safeEditReply(interaction, {
                     embeds: [
                         errorEmbed(
-                            "Permission Denied",
-                            "You need the `Manage Channels` permission, the configured `Ticket Staff Role`, or be the ticket creator to close this ticket.",
+                            "Geen toegang",
+                            "Je moet MOD+ zijn om dit te mogen doen.",
                         ),
                     ],
                 });
@@ -52,7 +52,7 @@ export default {
             const channel = interaction.channel;
             const reason =
                 interaction.options?.getString("reason") ||
-                "Closed via command without a specific reason.";
+                "De ticket is gesloten zonder openbare reden.";
 
             const result = await closeTicket(channel, interaction.user, reason);
             
@@ -66,8 +66,8 @@ export default {
                 return await InteractionHelper.safeEditReply(interaction, {
                     embeds: [
                         errorEmbed(
-                            "Not a Ticket Channel",
-                            result.error || "This command can only be used in a valid ticket channel.",
+                            "Geen ticket channel!",
+                            result.error || " Dit kan alleen in Tickets.",
                         ),
                     ],
                 });
@@ -77,7 +77,7 @@ export default {
                 embeds: [
                     successEmbed(
                         "Ticket Closed!",
-                        "This ticket has been closed successfully.",
+                        "Het is opgelost!.",
                     ),
                 ],
             });
