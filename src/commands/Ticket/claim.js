@@ -25,8 +25,8 @@ export default {
                 return await InteractionHelper.safeEditReply(interaction, {
                     embeds: [
                         errorEmbed(
-                            "Not a Ticket Channel",
-                            "This command can only be used in a valid ticket channel.",
+                            "Geen ticket channel",
+                            "Deze actie kan alleen in Tickets plaatvinden.",
                         ),
                     ],
                 });
@@ -36,8 +36,8 @@ export default {
                 return await InteractionHelper.safeEditReply(interaction, {
                     embeds: [
                         errorEmbed(
-                            "Permission Denied",
-                            "You need the `Manage Channels` permission or the configured `Ticket Staff Role` to claim tickets.",
+                            "Geen toegang",
+                            "Je moet MOD+ zijn om dit te mogen doen.",
                         ),
                     ],
                 });
@@ -56,8 +56,8 @@ export default {
                 return await InteractionHelper.safeEditReply(interaction, {
                     embeds: [
                         errorEmbed(
-                            "Not a Ticket Channel",
-                            result.error || "This command can only be used in a valid ticket channel.",
+                            "Geen ticket channel",
+                            result.error || "Deze actie kan alleen in Tickets plaatvinden.",
                         ),
                     ],
                 });
@@ -67,7 +67,7 @@ export default {
                 embeds: [
                     successEmbed(
                         "Ticket Claimed!",
-                        "You have successfully claimed this ticket.",
+                        "Het is nu jouw probleem!.",
                     ),
                 ],
             });
